@@ -1,0 +1,399 @@
+/* Globale Stijlen & Reset */
+:root {
+    --primary-color: #007bff; /* Blauw */
+    --primary-hover: #0056b3;
+    --accent-color: #28a745; /* Groen */
+    --background-light: #f8f9fa; /* Lichtgrijs/Wit */
+    --text-dark: #212529; /* Donkergrijs */
+    --card-background: #ffffff;
+    --shadow-light: 0 4px 12px rgba(0, 0, 0, 0.08);
+    --border-radius: 10px;
+    --font-family: 'Inter', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-family);
+    line-height: 1.6;
+    color: var(--text-dark);
+    background-color: var(--background-light);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+h1, h2, h3 {
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 0.8em;
+}
+
+h2 {
+    font-size: 2.2em;
+    text-align: center;
+    color: var(--primary-color);
+}
+
+strong {
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+/* Knoppen (Buttons) */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-hover);
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    background-color: var(--accent-color);
+    color: white;
+    padding: 8px 15px;
+    font-size: 0.9em;
+}
+
+.btn-secondary:hover {
+    background-color: #1e7e34;
+}
+
+.btn-nav {
+    padding: 8px 15px;
+    font-size: 0.9em;
+}
+
+.btn-large {
+    padding: 15px 30px;
+    font-size: 1.1em;
+}
+
+/* Navigatiebalk (Header) */
+.navbar {
+    background-color: var(--card-background);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5em;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+.navbar nav a {
+    color: var(--text-dark);
+    text-decoration: none;
+    margin-left: 25px;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.navbar nav a:hover {
+    color: var(--primary-color);
+}
+
+/* Hero Sectie */
+.hero {
+    padding: 80px 0;
+    text-align: center;
+    background: linear-gradient(135deg, var(--background-light) 0%, #d8eaff 100%);
+}
+
+.hero-title {
+    font-size: 3.5em;
+    margin-bottom: 0.2em;
+    color: var(--text-dark);
+}
+
+.hero-title strong {
+    color: var(--accent-color);
+}
+
+.hero-subtitle {
+    font-size: 1.3em;
+    color: #495057;
+    margin-bottom: 30px;
+}
+
+.search-box {
+    display: flex;
+    justify-content: center;
+    max-width: 600px;
+    margin: 30px auto;
+    background-color: white;
+    border-radius: 50px;
+    box-shadow: var(--shadow-light);
+    overflow: hidden;
+}
+
+.search-box input {
+    flex-grow: 1;
+    padding: 15px 25px;
+    border: none;
+    font-size: 1em;
+    outline: none;
+}
+
+.search-box button {
+    border-radius: 0 50px 50px 0;
+    padding: 15px 30px;
+}
+
+.hero-cta-text {
+    margin-top: 20px;
+    font-style: italic;
+    color: #6c757d;
+}
+
+/* Algemene Sectie Stijl */
+section {
+    padding: 60px 0;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 123, 255, 0.3), rgba(0, 0, 0, 0));
+    margin: 40px 0;
+}
+
+
+/* Featured Calculators */
+.featured-calculators {
+    background-color: var(--card-background);
+    padding-bottom: 80px;
+}
+
+.calculators-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.calculator-card {
+    background-color: white;
+    padding: 30px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-light);
+    border-left: 5px solid var(--accent-color); /* Uniek design touch */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.calculator-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.calculator-card h3 {
+    color: var(--primary-color);
+    margin-bottom: 10px;
+    font-size: 1.5em;
+}
+
+.calculator-card p {
+    margin-bottom: 20px;
+    color: #495057;
+}
+
+.view-all-cta {
+    text-align: center;
+    margin-top: 50px;
+}
+
+/* Over Ons Sectie */
+.about-us {
+    background-color: var(--background-light);
+}
+
+.about-content {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+    margin-top: 40px;
+}
+
+.text-block {
+    flex: 2;
+}
+
+.text-block p {
+    margin-bottom: 15px;
+    font-size: 1.1em;
+}
+
+.features-list {
+    flex: 1;
+    background-color: var(--card-background);
+    padding: 30px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-light);
+}
+
+.features-list h3 {
+    color: var(--primary-color);
+    border-bottom: 2px solid #e9ecef;
+    padding-bottom: 10px;
+    margin-top: 0;
+}
+
+.features-list ul {
+    list-style: none;
+    padding-top: 15px;
+}
+
+.features-list li {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+}
+
+.features-list .icon {
+    font-size: 1.2em;
+    margin-right: 10px;
+    color: var(--accent-color);
+}
+
+/* Toepassingen Sectie */
+.applications {
+    text-align: center;
+}
+
+.apps-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.app-card {
+    background-color: var(--card-background);
+    padding: 25px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-light);
+    text-align: left;
+    transition: all 0.3s ease;
+    border-top: 4px solid var(--primary-color);
+}
+
+.app-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+.app-card h3 {
+    font-size: 1.3em;
+    margin-bottom: 10px;
+    color: var(--text-dark);
+}
+
+/* Footer */
+footer {
+    background-color: var(--text-dark);
+    color: white;
+    padding: 30px 0;
+    font-size: 0.9em;
+}
+
+footer .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-links a {
+    color: #adb5bd;
+    text-decoration: none;
+    margin-left: 20px;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: var(--primary-color);
+}
+
+/* Responsiviteit */
+@media (max-width: 992px) {
+    .navbar nav {
+        display: none; /* Navigatie verbergen op kleinere schermen voor mobiel menu */
+    }
+
+    .hero-title {
+        font-size: 2.5em;
+    }
+
+    .hero {
+        padding: 60px 0;
+    }
+
+    .search-box {
+        flex-direction: column;
+        border-radius: 10px;
+        box-shadow: none;
+    }
+
+    .search-box input {
+        border-radius: 10px 10px 0 0;
+        border: 1px solid #ced4da;
+        margin-bottom: -1px;
+    }
+
+    .search-box button {
+        border-radius: 0 0 10px 10px;
+        width: 100%;
+    }
+
+    .about-content {
+        flex-direction: column;
+    }
+
+    .features-list {
+        margin-top: 20px;
+    }
+
+    footer .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-links {
+        margin-top: 15px;
+    }
+
+    .footer-links a {
+        margin: 0 10px;
+    }
+}
